@@ -1,0 +1,260 @@
+.html
+
+VScode中 ！+回车自动生成骨架
+<html>
+
+    <head>
+        <title>网页标题</title>
+    </head>
+
+    <body>
+        网页主体
+    </body>
+
+</html>
+
+
+<!-- 注释 -->
+
+<h1>1级标题</h1>
+<p>段落标签</p>
+<br> 换行
+<hr> 水平线
+
+
+不重要 重要 为了后期维护更直观
+<b></b> 加粗 <strong></strong>
+<u></u> 下划线 <ins></ins>
+<i></i> 倾斜 <em></em>
+<s></s> 删除线 <del></del>
+
+
+图片
+<img src="./1.jpg" alt="图片说明" title="鼠标悬停的时候显示的文字" width="200宽" height="100高">
+
+
+音频 mp3格式
+<audio src="./1.mp3" controls显示播放控件 autoplay自动播放 loop循环播放></audio>
+
+
+视频 mp4格式
+<video src="./1.mp4" controls显示播放控件 autoplay自动播放（在谷歌浏览器中加muted实现静音播放） loop循环播放></video>
+
+
+链接
+<a href=" " target="_self覆盖原网页 _blank用新窗口打开">超链接文字</a>
+目标网页如果写空链接的话，写个#
+
+<br><br><br><br><br>
+
+列表：
+
+无序列表：
+<ul>
+    <li>无序标签</li>
+    <li>文字</li>
+</ul>
+
+有序列表：
+<ol>
+    <li>有序标签</li>
+    <li>文字</li>
+</ol>
+
+自定义列表：
+<dl>
+    <dt>主题</dt>
+    <dd>内容1</dd>
+    <dd>内容2</dd>
+</dl>
+
+
+<br><br><br><br><br>
+
+
+表格：
+table表格整体 > tr行 > td单元格
+
+表格属性：
+border: 边框宽度
+width: 表格宽度 (推荐在CSS中设置)
+height: 表格高度 (推荐在CSS中设置)
+
+表格大标题 和 每列的表头单元格：
+<caption></caption> 表格大标题
+<th></th> 每列的表头单元格
+<td></td> 表格单元格
+
+表格的结构：
+表格头部 <thead></thead> 头
+表格主体 <tbody></tbody> 身体
+表格底部 <tfoot></tfoot> 脚
+
+合并单元格属性：
+跨行合并：上下合并，只保留最上 rowspan 给保留的单元格设置 填数量
+跨列合并：左右合并，只保留最左 colspan 给保留的单元格设置 填数量
+注意:不能跨结构标签合并!!
+
+<table border="1" width="600" height="400">
+    <caption>表格大标题</caption>
+    <thead>
+        <tr>
+            <th>每列的表头单元格</th>
+            <th>每列的表头单元格</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+            <td rowspan="2">表格单元格</td>
+            <td>表格单元格</td>
+        </tr>
+        <tr>
+            <td>表格单元格</td>
+            <td>表格单元格</td>
+        </tr>
+    </tbody>
+
+    <tfoot>
+        <tr>
+            <td colspan="2">表格</td>
+            <td>表格</td>
+        </tr>
+    </tfoot>
+
+</table>
+
+
+<br><br><br><br><br>
+
+
+表单标签：输入框 <input type=""> ""中填下列属性值
+文本框 text  <input type="text">
+    -占位符 placeholder 提示用户输入内容的文本<input type="text" placeholder="请输入用户名">
+
+密码框 password  <input type="password">
+    -占位符 placeholder 提示用户输入内容的文本<input type="password" placeholder="请输入密码">
+
+单选框 radio  <input type="radio">
+    -分组，一组只能有一个被选中 name 
+        - 性别:
+        <input type="radio" name="自定义名">男 
+        <input type="radio" name="自定义名">女
+    -默认选中 checked 
+        - 性别:
+        <input type="radio" name="自定义名" checked>男 
+        <input type="radio" name="自定义名">女
+
+多选框 checkbox  <input type="checkbox">
+    -默认选中 checked 
+    <input type="checkbox" checked>
+
+文件选择 file  <input type="file">
+    -多文件选择 multiple
+    <input type="file" multiple>
+
+
+按钮：
+提交按钮 submit  <input type="submit">   提交数据到后端服务器
+重置按钮 reset  <input type="reset">
+普通按钮(用于之后js添加功能) button  <input type="button">
+
+表单域标签 <form>中间内容看作一个整体</form>
+提交地址 action
+按钮自定义文字 value
+<form action="">
+    <input type="text" placeholder="请输入用户名">
+    <br>
+    <input type="password" placeholder="请输入密码">
+    <br>
+    <input type="submit" value="登录">
+    <input type="reset" value="重置输入">
+    <input type="button" value="给按钮自定义文字">
+</form>
+
+button按钮标签属性:<button>按钮名自定义</button>
+提交按钮 submit <button type="submit">提交按钮</button>
+重置按钮 reset <button type="reset">重置按钮</button>
+普通按钮(用于之后js添加功能) button <button type="button">自定义</button>
+
+
+下拉菜单：
+下拉菜单的整体 <select name="" id=""></select>
+菜单的每一项 <option></option>
+属性: selected 下拉菜单的默认选中
+
+<select name="" id="">
+    <option>广州</option>
+    <option selected>深圳</option>
+    <option>上海</option>
+    <option>北京</option>
+</select>
+
+文本域:
+在网页中提供可输入多行文本的表单控件<textarea name="" id="" cols="30" rows="10"></textarea>
+属性：
+规定文本域可见宽度 cols 
+规定文本域可见行数 rows 
+注意点:右下角可以拖拽改大小,实际开发时针对样式效果,推荐用CSS设置。
+
+
+绑定内容与表单标签的关系<label for=""></label>
+属性:  id
+用法1:
+id的内容 与 for的内容 一致。
+- 性别:
+<input type="radio" name="自定义名" id="man"><label for="man">男</label>
+<input type="radio" name="自定义名" id="woman"><label for="woman">女</label>
+
+用法2:
+<label><input type="radio" name="自定义名">男</label>
+<label><input type="radio" name="自定义名">女</label>
+
+
+<br><br><br><br><br>
+
+
+语义化：
+
+没有任何语义的标签: 用于网页布局
+<div>独占一行</div>
+<div>独占一行</div>
+<span>一行可以显示多个</span>
+<span>一行可以显示多个</span>
+
+有语义的布局标签:(了解)
+网页头部 <header></header>
+网页导航 <nav></nav>
+网页底部 <footer></footer>
+网友侧边栏 <aside></aside>
+网页区块 <section></section>
+网页文章 <article></article>
+
+
+<br><br><br><br><br>
+
+字符实体：
+显示结果	描述	  实体名称	   实体编号
+            空格      &nbsp;    	&#160;
+<	       小于号	  &lt;	         &#60;
+>	       大于号	  &gt;	        &#62;
+&	       和号	      &amp;	       &#38;
+"	       引号	     &quot;	        &#34;
+'	       撇号 	 &apos; (IE不支持)	&#39;
+￠	   分(cent)	   &cent;	        &#162;
+£	    镑(pound)   &pound;	        &#163;
+¥	    元(yen)	    &yen;	       &#165;
+€	   欧元(euro)	  &euro;    	&#8364;
+§	      小节	     &sect;	        &#167;
+©	版权(copyright)  &copy;	       &#169;
+®	     注册商标	&reg;	       &#174;
+™	     商标	    &trade;	      &#8482;
+×	     乘号	   &times;	      &#215;
+÷	     除号	  &divide;	     &#247;
+
+
+<br><br><br><br><br>
+
+
+
+
